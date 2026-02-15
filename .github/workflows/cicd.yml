@@ -1,6 +1,7 @@
 # Referrence: https://synuns.tistory.com/75
 name: CICD
 
+# workflow test
 
 # 이벤트가 실행될 workflow 정의
 on:
