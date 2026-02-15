@@ -16,7 +16,10 @@ const ItemPanel = ({ pageTitle, filteredCompleted, filteredImportant }) => {
 
   // Auth Data
   const state = useSelector((state) => state.auth.authData);
-  const userKey = state?.sub;
+  // const userKey = state?.sub;
+
+  const userKey = '109771110417272404346' // 임시로
+  //console.log("state: ", state);
 
   // Moda Open Data
   const isOpen = useSelector((state) => state.modal.isOpen);
@@ -24,7 +27,7 @@ const ItemPanel = ({ pageTitle, filteredCompleted, filteredImportant }) => {
   // Get Item Data
   const getTasksData = useSelector((state) => state.api.getItemData);
 
-  // console.log(getTasksData);
+  //console.log("getTasksData: ", getTasksData);
 
   useEffect(() => {
     if (!userKey) return;
