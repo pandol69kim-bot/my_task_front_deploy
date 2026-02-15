@@ -27,7 +27,7 @@ jobs:
       - name: Push Docker Image
         run: docker push peterpan69kim/task_app_frong_deploy:latest
 
-deploy:
+  deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
