@@ -26,3 +26,15 @@ jobs:
         run: docker build -t peterpan69kim/task_app_frong_deploy .
       - name: Push Docker Image
         run: docker push peterpan69kim/task_app_frong_deploy:latest
+
+deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull image from docker hub
+        run: docker pull peterpan69kim/task_app_frong_deploy:latest
+      - name: Delete Existing Container
+        run: docker rm -f task-container
+      - name: Run container
+        run: docker run -d -p 80:80 --name task-container peterpan69kim/task_app_frong_deploy
+
