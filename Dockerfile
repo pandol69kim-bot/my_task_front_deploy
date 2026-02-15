@@ -1,6 +1,6 @@
 # Build React App
-# FROM node:alpine3.18 as build
-FROM node:18-alpine3.18 AS build
+FROM node:alpine3.18 as build
+# FROM node:18-alpine3.18 AS build
 WORKDIR /app
 COPY package*.json ./
 # RUN npm install
