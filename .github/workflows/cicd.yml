@@ -37,4 +37,3 @@ jobs:
         run: docker rm -f task-container
       - name: Run container
         run: docker run -d -p 80:80 --name task-container peterpan69kim/task_app_frong_deploy
-
