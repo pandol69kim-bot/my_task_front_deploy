@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="logo-wrapper flex w-full items-center justify-center gap-8">
         <div className="logo"></div>
         <h2 className="font-semibold text-xl">
-          <Link to="/">ANSHALL</Link>
+          <Link to="/">PANSHALL</Link>
         </h2>
       </div>
       <ul className="menus">
