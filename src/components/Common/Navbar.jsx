@@ -63,7 +63,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      {isAuth ? (
+      {isAuth || true ? (
         <div className="auth-button w-4/5 flex items-center">
           <button
             className="flex justify-center items-center gap-2 bg-gray-300 text-gray-900 py-3 px-4 rounded-md w-full"
