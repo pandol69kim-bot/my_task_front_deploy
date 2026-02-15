@@ -31,7 +31,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ip-172-31-19-163
     steps:
       - name: Pull image from docker hub
         run: docker pull peterpan69kim/task_app_frong_deploy:latest
