@@ -12,7 +12,7 @@ on:
 # 작업 정의(jobs): build, deploy
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout Source Code
         uses: actions/checkout@v4
