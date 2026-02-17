@@ -34,8 +34,8 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Pull image from docker hub
-        run: docker pull peterpan69kim/task_app_frong_deploy:latest
+        run: sudo docker pull peterpan69kim/task_app_frong_deploy:latest
       - name: Delete Existing Container
-        run: docker rm -f task-container
+        run: sudo docker rm -f task-container
       - name: Run container
-        run: docker run -d -p 80:80 --name task-container peterpan69kim/task_app_frong_deploy
+        run: sudo docker run -d -p 80:80 --name task-container peterpan69kim/task_app_frong_deploy
