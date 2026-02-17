@@ -33,6 +33,12 @@ jobs:
     needs: build
     runs-on: self-hosted
     steps:
+      - name: Create env file
+        run: |
+          touch .env
+          echo "${{ secrets.VITE_AUTH_CLIENT_ID }}" > .env
+      - name: Sign in to Docker Hub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Pull image from docker hub
         run: sudo docker pull peterpan69kim/task_app_frong_deploy:latest
       - name: Delete Existing Container
