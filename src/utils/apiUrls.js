@@ -1,4 +1,4 @@
-const DOMAIN = 'https://backend.pandol.shop:5000';
+const DOMAIN = 'http://backend.pandol.shop:5000';
 
 const GET_TASKS_API_URL = `${DOMAIN}/get_tasks`;
 const POST_TASK_API_URL = `${DOMAIN}/post_task`;
